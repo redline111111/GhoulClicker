@@ -14,7 +14,6 @@
             <div class="bg-zinc-300 w-64 flex-initial">
                 <img src="./img/level_1.png" alt="ghoul">
             </div>
-            <button class="border-2 border-solid rounded-none border-sky-600 p-1 flex-initial w-32" name="Click">Кликнуть</button>
             <div class="flex-initial text-red-600" name="score">1000 Rc-клеток</div>
         </div>
 
@@ -28,7 +27,59 @@
 
         <!-- Info -->
         <div name="list" class="bg-red-300 rounded-md h-72 max-w-2xl my-4" style="display: none">
-            asd
+            <div class="gap-2 p-4 h-full">
+                <div class="flex flex-row gap-4 h-32 mb-2">
+                    <!-- Showing -->
+                    <div>
+                        <div class="font-bold">
+                            Показатели: 
+                        </div>
+                        <div>
+                            Здоровье: 100/100
+                        </div>
+                        <div>
+                            Энергия: 10/10
+                        </div>
+                        <div>
+                            Голод: 0/100
+                        </div>
+                        <div>
+                            Скрытность: 100/100
+                        </div>
+                    </div>
+
+                    <!-- Characteristics -->
+                   <div>
+                        <div class="font-bold">
+                            Характеристики:
+                        </div>
+                        <div class="flex flex-col flex-wrap h-28">
+                            <div name="strength">
+                                Сила: 1
+                            </div>
+                            <div name="agility"> 
+                                Ловкость: 1
+                            </div>
+                            <div name="intelligence">
+                                Интеллект: 1
+                            </div>
+                            <div name="endurance">
+                                Выносливость: 1
+                            </div>
+                            <div name="charisma">
+                                Харизма: 1
+                            </div>
+                            <div name="mastery">
+                                Мастерство: 1
+                            </div>
+                        </div>
+                   </div>
+                </div>
+                <div class="flex flex-col h-32">
+                    <div>Имя: Иван</div>
+                    <div>Ранг: C</div>
+                </div>
+            </div>
         </div>
 
          <!-- Rating -->
@@ -38,7 +89,18 @@
 
          <!-- Cells -->
         <div name="list" class="bg-blue-200 rounded-md h-72 max-w-2xl my-4" style="display: none">
-            asd
+            <div class="flex flex-col gap-2 py-4">
+                <button onclick="drinkCoffe()">
+                    Выпить кофе
+                </button>
+                <button onclick="hunting()">
+                    Охотиться на человека
+                </button>
+                <button onclick="attackGhoul()">
+                    Напасть на гуля
+                </button>
+            </div>
+            
         </div>
 
          <!-- Perks -->
