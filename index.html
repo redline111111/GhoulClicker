@@ -11,101 +11,204 @@
     <div class="p-8 bg-blue-100 min-h-screen" >
         <!-- Profile -->
         <div class="flex flex-col gap-2">
-            <div class="bg-zinc-300 w-64 flex-initial">
-                <img src="./img/level_1.png" alt="ghoul">
-            </div>
-            <div class="flex-initial text-red-600" name="score">1000 Rc-клеток</div>
-        </div>
-
-        <!-- Menu -->
-        <div class="flex flex-row justify-between max-w-screen-sm">
-            <button onclick="selectMenuItem(0)" name="menu-item">Общая информация</button>
-            <button onclick="selectMenuItem(1)" name="menu-item">Рейтинг</button>
-            <button onclick="selectMenuItem(2)" name="menu-item">Rc-клетки</button>
-            <button onclick="selectMenuItem(3)" name="menu-item">Таланты</button>
-        </div>
-
-        <!-- Info -->
-        <div name="list" class="bg-red-300 rounded-md h-72 max-w-2xl my-4" style="display: none">
-            <div class="gap-2 p-4 h-full">
-                <div class="flex flex-row gap-4 h-32 mb-2">
-                    <!-- Showing -->
-                    <div>
-                        <div class="font-bold">
-                            Показатели: 
+            <div class="flex flex-row gap-10">
+                <div class="bg-zinc-300 w-64 flex-initial">
+                    <img src="./img/level_1.png" alt="ghoul">
+                </div>
+                <div class="flex flex-col gap-2 bg-gray-100 p-4">
+                    <div class="font-bold">
+                        Общая информация
+                    </div>
+                    <div class="flex flex-row gap-10 h-32 mb-2">
+                        <!-- Showing -->
+                        <div name="playerStats">
+                            <div class="font-bold">
+                                Показатели: 
+                            </div>
+                            <div name="health">
+                                Здоровье: 100/100
+                            </div>
+                            <div name="energy">
+                                Энергия: 10/10
+                            </div>
+                            <div name="hunger">
+                                Голод: 0/100
+                            </div>
+                            <div name="secrecy">
+                                Скрытность: 100/100
+                            </div>
+                            <div name="damage">
+                                Урон: 10-10
+                            </div>
                         </div>
+                         <!-- Attributes -->
                         <div>
-                            Здоровье: 100/100
+                            <div class="font-bold">
+                                Атрибуты:
+                            </div>
+                            <div class="flex flex-col flex-wrap h-28 w-64">
+                                <div name="strength">
+                                    Сила: 1
+                                </div>
+                                <div name="agility"> 
+                                    Ловкость: 1
+                                </div>
+                                <div name="intelligence">
+                                    Интеллект: 1
+                                </div>
+                                <div name="endurance">
+                                    Выносливость: 1
+                                </div>
+                                <div name="charisma">
+                                    Харизма: 1
+                                </div>
+                                <div name="mastery">
+                                    Мастерство: 1
+                                </div>
+                            </div>
                         </div>
+                        <!-- Characteristics -->
                         <div>
-                            Энергия: 10/10
-                        </div>
-                        <div>
-                            Голод: 0/100
-                        </div>
-                        <div>
-                            Скрытность: 100/100
+                            <div class="font-bold">
+                                Характеристики:
+                            </div>
+                            <div class="flex flex-col flex-wrap h-28 w-64">
+                                <div name="defense">
+                                    Защита: 1
+                                </div>
+                                <div name="speed"> 
+                                    Скорость: 1
+                                </div>
+                                <div name="evasion">
+                                    Уклонение: 1
+                                </div>
+                                <div name="crit_damage">
+                                    Крит. урон: 100%
+                                </div>
+                                <div name="crit_chance">
+                                    Крит. шанс: 1%
+                                </div>
+                                <div name="accuracy">
+                                    Точность: 1
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Characteristics -->
-                   <div>
-                        <div class="font-bold">
-                            Характеристики:
-                        </div>
-                        <div class="flex flex-col flex-wrap h-28">
-                            <div name="strength">
-                                Сила: 1
-                            </div>
-                            <div name="agility"> 
-                                Ловкость: 1
-                            </div>
-                            <div name="intelligence">
-                                Интеллект: 1
-                            </div>
-                            <div name="endurance">
-                                Выносливость: 1
-                            </div>
-                            <div name="charisma">
-                                Харизма: 1
-                            </div>
-                            <div name="mastery">
-                                Мастерство: 1
-                            </div>
-                        </div>
-                   </div>
-                </div>
-                <div class="flex flex-col h-32">
-                    <div>Имя: Иван</div>
-                    <div>Ранг: C</div>
                 </div>
             </div>
+           
+            <div class="flex-initial text-red-600" name="score">1000 Rc-клеток</div>
         </div>
+        <div class="flex flex-row gap-5">
+            <div class="w-6/12">
+                <!-- Menu -->
+                <div class="flex flex-row justify-between max-w-screen-sm">
+                    <button onclick="selectMenuItem(0)" name="menu-item">Статистика</button>
+                    <button onclick="selectMenuItem(1)" name="menu-item">Рейтинг</button>
+                    <button onclick="selectMenuItem(2)" name="menu-item">Rc-клетки</button>
+                    <button onclick="selectMenuItem(3)" name="menu-item">Таланты</button>
+                </div>
 
-         <!-- Rating -->
-         <div name="list" class="bg-orange-300 rounded-md h-72 max-w-2xl my-4" style="display: none">
-            asd
-        </div>
+                <!-- Info -->
+                <div name="list" class="bg-red-300 rounded-md h-72 max-w-2xl my-4" style="display: none">
+                    <div class="gap-2 p-4 h-full">
+                        <div class="flex flex-row gap-4 h-32 mb-2">
+                            <!-- Showing -->
+                            <!-- Characteristics -->
+                        <div></div>
+                        </div>
+                        <div class="flex flex-col h-32 my-6">
+                            <div>Имя: Иван</div>
+                            <div>Ранг: C</div>
+                        </div>
+                    </div>
+                </div>
 
-         <!-- Cells -->
-        <div name="list" class="bg-blue-200 rounded-md h-72 max-w-2xl my-4" style="display: none">
-            <div class="flex flex-col gap-2 py-4">
-                <button onclick="drinkCoffe()">
-                    Выпить кофе
-                </button>
-                <button onclick="hunting()">
-                    Охотиться на человека
-                </button>
-                <button onclick="attackGhoul()">
-                    Напасть на гуля
-                </button>
+                <!-- Rating -->
+                <div name="list" class="bg-orange-300 rounded-md h-72 max-w-2xl my-4" style="display: none">
+                    asd
+                </div>
+
+                <!-- Cells -->
+                <div name="list" class="bg-blue-200 rounded-md h-72 max-w-2xl my-4" style="display: none">
+                    <div name="cells" class="flex flex-col gap-2 py-4">
+                        <button onclick="drinkCoffe()">
+                            Выпить кофе
+                        </button>
+                        <button onclick="hunting()">
+                            Охотиться на человека
+                        </button>
+                        <button onclick="attackGhoul()">
+                            Напасть на гуля
+                        </button>
+                    </div>
+                    
+                </div>
+
+                <!-- Perks -->
+                <div name="list" class="bg-indigo-200 rounded-md h-72 max-w-2xl my-4" style="display: none">
+                    <div class="flex flex-row justify-between items-center px-32 h-full ">
+                        <div class="cursor-pointer bg-red-400 rounded-lg p-2 text-center">
+                            Ринкаку
+                        </div>
+                        <div class="cursor-pointer bg-blue-400 rounded-lg p-2 text-center w-20">
+                            Укаку
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rinkaku -->
+                <div name="list" class="bg-red-400 rounded-md h-72 max-w-2xl my-4" >
+                    <div class="flex flex-row justify-between items-center h-full">
+                        <div class="flex flex-col justify-between w-full h-full items-center p-8">
+                            <div class="bg-green-200 w-1/2 py-2 rounded-lg items-center text-center cursor-pointer">
+                                    +1 Ловкость
+                            </div>
+                            <div class="bg-green-200 w-1/2 py-2 rounded-lg items-center text-center cursor-pointer">+1% Скорости</div>
+                            <div class="bg-green-200 w-1/2 py-2 rounded-lg items-center text-center cursor-pointer">+15% Шанс оглушить</div>
+                            <div class="bg-green-300 w-1/2 py-2 rounded-lg items-center text-center cursor-pointer">Мутация</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-        </div>
+            <div name="battleMode" class="flex flex-col gap-2 w-1/3" style="display: none;">
+               <div>Окно боя:</div>
+               <div class="border border-solid rounded-md border-orange-500 bg-zinc-200 h-72 max-w-2x1" >
+                    <div class="flex flex-row justify-around items-center h-full">
+                        <div class="w-64">
+                            <img src="./img/level_1.png" alt="ghoul">
+                            <div class="text-center">Вы</div>
+                        </div>
+                        <div class="flex flex-row" name="enemy">
+                            <div class="w-64 relative">
+                                <img src="./img/level_1.png" alt="ghoul" name="avatar">
+                                <div class="absolute top-1/2 left-1/4 -translate-y-2/4">
+                                    <div class="flex flex-row justify-center items-center rounded-lg w-10 h-10" name="attack" style="background: rgba(255, 0, 0, 0.4); display: none;">
+                                         <img src="./img/attack.svg" alt="attack" class="w-8 h-8" >
+                                    </div>
+                                    
+                                </div>
+                                <div class="text-center" name="ghoulName">Гуль C-ранга</div>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <div class="text-sm flex flex-row">
+                                    <img class="w-6" src="./img/heart.svg" alt="">
+                                    <div class="mx-2" name="health">78/78</div>
+                                </div>
+                                <div class="text-sm flex flex-row my-6">
+                                    <img class="w-6" src="./img/energy.svg" alt="">
+                                    <div class="text-sm mx-2" name="energy">18/18</div>
+                                </div>
+                                <div class="text-sm flex flex-row">
+                                    <img class="w-6" src="./img/sword.svg" alt="">
+                                    <div class="text-sm mx-2" name="damage">12-15</div>
+                                </div>
+                            </div>
+                        </div>
 
-         <!-- Perks -->
-        <div name="list" class="bg-lime-300 rounded-md h-72 max-w-2xl my-4" style="display: none">
-            asd
+                    </div>
+               </div>
+            </div>
         </div>
     </div>
     
